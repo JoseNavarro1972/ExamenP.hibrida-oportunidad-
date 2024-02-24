@@ -1,0 +1,46 @@
+<div>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Crear Aviso
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <form (ngSubmit)="guardarAviso()">
+      <table>
+        <tr>
+          <td>
+            <ion-item>
+              <ion-label position="floating">Título</ion-label>
+              <ion-input type="text" [(ngModel)]="titulo" name="titulo" required></ion-i
+            </ion-item>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ion-item>
+              <ion-label position="floating">Tipo de Aviso</ion-label>
+              <ion-input type="text" [(ngModel)]="tipoAviso" name="tipoAviso" required><
+            </ion-item>
+          </td>
+        </tr> 
+        <tr>
+          <td>
+            <ion-item>
+              <ion-label position="floating">Descripción</ion-label>
+              <ion-textarea [(ngModel)]="descripcion" name="descripcion" required></ion-
+            </ion-item>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ion-button expand="full" type="submit">Guardar Aviso</ion-button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <!-- Utiliza [routerLink] para redirigir a la página Crear Aviso -->
+    <ion-button expand="full" routerLink="/crear-aviso">Agregar Foto</ion-button>
+  </ion-content>
+</div>

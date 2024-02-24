@@ -1,0 +1,16 @@
+<div *ngIf="avisos.length > 0; else noAvisos">
+  <div *ngFor="let aviso of avisos">
+    <div class="aviso">
+      <div class="titulo">{{ aviso.titulo }}</div>
+      <div class="fecha">{{ aviso.fecha }}</div>
+      <button (click)="eliminarAviso(aviso.id)">Eliminar</button>
+      <!-- Agregar aquí el icono de papelera que no se olvide -->
+    </div>
+  </div>
+</div>
+
+<ng-template #noAvisos>
+  <p>No hay avisos disponibles.</p>
+</ng-template>
+
+<button (click)="volverAlFormulario()">Volver al formulario crear</button>
